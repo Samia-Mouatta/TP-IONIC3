@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Bitcoin Actuality
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let c of actus">
+      <ion-thumbnail item-start>
+        <div *ngIf="c.urlToImage != null; else elsetag">
+          <img src="{{c.urlToImage}}">
+        </div>
+        <ng-template #elsetag>
+          <div>
+            <img src="./assets/imgs/logo.png">
+          </div>
+        </ng-template>
+      </ion-thumbnail>
+      <h2>{{c.title }}</h2>
+      <p>Description: {{c.description}}</p>
+        <h3 text-right > By {{c.author!=null ? c.author :'Not Known' }} - {{ c.publishedAt| date:'dd/MM/yyyy'}} </h3>
+    </ion-item>
+  </ion-list>
+</ion-content>
