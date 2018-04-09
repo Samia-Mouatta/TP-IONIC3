@@ -8,6 +8,7 @@ import { BitcoinPage } from '../pages/bitcoin/bitcoin';
 import { TechCrunchPage } from '../pages/techcrunch/techcrunch';
 import { ApplePage } from '../pages/apple/apple';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ItemDetailPage } from '../pages/item-detail/item-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,6 +22,7 @@ import { RestProvider } from '../providers/rest/rest';
     BitcoinPage,
     TechCrunchPage,
     ApplePage,
+    ItemDetailPage,
     TabsPage
   ],
   imports: [
@@ -35,6 +37,7 @@ import { RestProvider } from '../providers/rest/rest';
     BitcoinPage,
     TechCrunchPage,
     ApplePage,
+    ItemDetailPage,
     TabsPage
   ],
   providers: [

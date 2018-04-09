@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import { ItemDetailPage } from '../item-detail/item-detail';
 
 @Component({
   selector: 'page-techcrunch',
@@ -29,4 +30,13 @@ export class TechCrunchPage {
     )
 
   }
+
+    itemClick(item){
+
+    this.navCtrl.push(ItemDetailPage, {
+      item: item
+    });
+  
+  }
+
 }

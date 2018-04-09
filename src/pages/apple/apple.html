@@ -6,14 +6,13 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let c of actus">
+    <ion-item *ngFor="let c of actus" (click)="itemClick(c)" detail-push>
       <ion-thumbnail item-start>
         <img src="{{c.urlToImage}}">
       </ion-thumbnail>
-      <!--<ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="c.publishedAt"></ion-datetime>-->
       <h2>{{c.title }}</h2>
       <p>Description: {{c.description}}</p>
       <h3 text-right > By {{c.author}} - {{ c.publishedAt| date:'dd/MM/yyyy'}} </h3>
     </ion-item>
   </ion-list>
-</ion-content>-->
+</ion-content>
